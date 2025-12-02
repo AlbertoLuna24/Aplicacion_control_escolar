@@ -1,4 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  apiUrl: 'https://aplicacion-control-escolar-api.onrender.com'
 
 };
