@@ -1,0 +1,14 @@
+Angular
+
+control_escolar_webapp/node_modules/
+control_escolar_webapp/dist/
+control_escolar_webapp/.angular/
+
+Django / Python
+
+env/
+venv/
+*.pyc
+pycache/
+db.sqlite3
+.DS_Store
