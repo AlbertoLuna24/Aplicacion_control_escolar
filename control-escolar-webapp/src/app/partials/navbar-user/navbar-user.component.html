@@ -35,14 +35,14 @@
       </li>
 
       <!-- Submenu desplegable -->
-      <ul *ngIf="materiasMenuOpen" class="submenu-list">
+      <ul *ngIf="materiasMenuOpen" class="scoop-submenu ">
         <li *ngIf="canSeeAdminItems()" routerLink="/registro-materias" routerLinkActive="active"
-          class="scoop-navbar-item">
+          class="sub-item ">
           <span class="material-icons">library_add</span>
           <span>Registro de Materias</span>
         </li>
         <li *ngIf="canSeeTeacherItems()" routerLink="/materias" routerLinkActive="active"
-          class="scoop-navbar-item">
+          class="sub-item ">
           <span class="material-icons">assignment</span>
           <span>Lista de Materias</span>
         </li>
