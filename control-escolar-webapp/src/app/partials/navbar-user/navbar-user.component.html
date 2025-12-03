@@ -26,7 +26,7 @@
         <span>Gráficas</span>
       </li>
 
-      <li *ngIf="canSeeTeacherItems()" class="scoop-navbar-item submenu" (click)="toggleMateriasMenu()">
+      <li *ngIf="canSeeTeacherItems()" class="scoop-navbar-item has-submenu" (click)="toggleMateriasMenu()">
         <span class="material-icons">library_books</span>
         <span>Materias</span>
         <span class="material-icons expand-icon">
@@ -36,12 +36,12 @@
 
       <!-- Submenu desplegable -->
       <ul *ngIf="materiasMenuOpen" class="scoop-submenu ">
-        <li *ngIf="canSeeAdminItems()" routerLink="/registro-materias" routerLinkActive="active"
+        <li *ngIf="canSeeAdminItems()" routerLink="/registro-materias" routerLinkActive="active" class="scoop-navbar-item sub-item"
           class="sub-item ">
           <span class="material-icons">library_add</span>
           <span>Registro de Materias</span>
         </li>
-        <li *ngIf="canSeeTeacherItems()" routerLink="/materias" routerLinkActive="active"
+        <li *ngIf="canSeeTeacherItems()" routerLink="/materias" routerLinkActive="active" class="scoop-navbar-item sub-item"
           class="sub-item ">
           <span class="material-icons">assignment</span>
           <span>Lista de Materias</span>
