@@ -29,7 +29,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',       # conserva soporte de tokens de DRF
     'corsheaders',                    # librería CORS actualizada
     'control_escolar_desit_api',
-    
+
 ]
 
 MIDDLEWARE = [
@@ -48,6 +48,7 @@ MIDDLEWARE = [
 CORS_ALLOWED_ORIGINS = [
     #'http://localhost:4200',
     "https://aplicacion-control-escolar-4l0zoc24i.vercel.app",
+    "https://aplicacion-control-escolar-l9nnug2iv.vercel.app", 
     'https://aplicacion-control-escolar.vercel.app',
     
 ]
