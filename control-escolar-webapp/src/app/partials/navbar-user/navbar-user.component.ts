@@ -10,32 +10,32 @@ import { FacadeService } from 'src/app/services/facade.service';
 export class NavbarUserComponent implements OnInit {
 
   public expandedMenu: string | null = null;
-  public userInitial: string = '';
-  public isMobileView: boolean = window.innerWidth <= 992;
-  public showUserMenu: boolean = false;
-  public mobileOpen: boolean = false;
-  public userRole: string = '';
+	public userInitial: string = '';
+	public isMobileView: boolean = window.innerWidth <= 992;
+	public showUserMenu: boolean = false;
+	public mobileOpen: boolean = false;
+	public userRole: string = '';
 
   // Estas variables se utilizarán por si se habilita el tema oscuro
   paletteMode: 'light' | 'dark' = 'light';
-  colorPalettes = {
-    light: {
-      '--background-main': '#f4f7fb',
-      '--sidebar-bg': '#23395d',
-      '--navbar-bg': '#fff',
-      '--text-main': '#222',
-      '--table-bg': '#fff',
-      '--table-header-bg': '#cfe2ff',
-    },
-    dark: {
-      '--background-main': '#181a1b',
-      '--sidebar-bg': '#1a2636',
-      '--navbar-bg': '#222',
-      '--text-main': '#e4ecfa',
-      '--table-bg': '#222',
-      '--table-header-bg': '#30507a',
-    }
-  };
+	colorPalettes = {
+			light: {
+				'--background-main': '#f4f7fb',
+				'--sidebar-bg': '#23395d',
+				'--navbar-bg': '#fff',
+				'--text-main': '#222',
+				'--table-bg': '#fff',
+				'--table-header-bg': '#cfe2ff',
+			},
+			dark: {
+				'--background-main': '#181a1b',
+				'--sidebar-bg': '#1a2636',
+				'--navbar-bg': '#222',
+				'--text-main': '#e4ecfa',
+				'--table-bg': '#222',
+				'--table-header-bg': '#30507a',
+			}
+	};
 
   togglePalette() {
     this.paletteMode = this.paletteMode === 'light' ? 'dark' : 'light';
@@ -148,11 +148,9 @@ export class NavbarUserComponent implements OnInit {
   canSeeRegisterItem(): boolean {
     return this.isAdmin() || this.isTeacher();
   }
-  materiasMenuOpen: boolean = false;
 
-  toggleMateriasMenu() {
-    this.materiasMenuOpen = !this.materiasMenuOpen;
+  canSeeMateriasMenu(): boolean {
+    return this.isAdmin() || this.isTeacher() || this.isStudent();
   }
-
 
 }
