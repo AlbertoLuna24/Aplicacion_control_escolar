@@ -87,7 +87,7 @@ export class RegistroMateriasComponent implements OnInit {
   }
 
   public checkboxChange(event:any){
-    //console.log("Evento: ", event);
+    //console.log("Materias: ", event);
     if(event.checked){
       this.materia.dias_json.push(event.source.value)
     }else{

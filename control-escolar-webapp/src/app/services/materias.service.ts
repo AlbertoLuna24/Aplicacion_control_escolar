@@ -114,7 +114,7 @@ export class MateriasService {
   }
 
   //Aquí van los servicios HTTP
-  //Servicio para registrar un nuevo usuario
+  //Servicio para registrar una nueva materia
   public registrarMateria (data: any): Observable <any>{
     const token = this.facadeService.getSessionToken();
     const headers = new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + token });
@@ -129,7 +129,7 @@ export class MateriasService {
     return this.http.get<any>(`${environment.url_api}/lista-materias/`, {headers});
   }
 
-  //Servicio para actualizar un usuario
+  //Servicio para actualizar una materia
   public actualizarMateria (data: any): Observable <any>{
     const token = this.facadeService.getSessionToken();
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' , 'Authorization': 'Bearer '+token});
