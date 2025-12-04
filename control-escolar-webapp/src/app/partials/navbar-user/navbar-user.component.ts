@@ -146,11 +146,11 @@ export class NavbarUserComponent implements OnInit {
     return this.isAdmin() || this.isTeacher();
   }
   canSeeRegisterItem(): boolean {
-    return this.isAdmin() || this.isTeacher();
+    return this.isAdmin();
   }
 
   canSeeMateriasMenu(): boolean {
-    return this.isAdmin() || this.isTeacher() || this.isStudent();
+    return this.isAdmin() || this.isTeacher();
   }
 
 }
